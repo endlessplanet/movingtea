@@ -1,1 +1,1 @@
-user ALL=(ALL) NOPASSWD: /dockerd-entrypoint.sh
+user ALL=(ALL) NOPASSWD:/dockerd-entrypoint.sh
