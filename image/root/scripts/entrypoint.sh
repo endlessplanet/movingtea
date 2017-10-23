@@ -1,3 +1,3 @@
 #!/bin/sh
 
-dockerd-entrypoint.sh "${@}"
+sudo dockerd-entrypoint.sh "${@}"
