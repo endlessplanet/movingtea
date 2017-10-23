@@ -14,4 +14,5 @@ DIND=$(mktemp) &&
     docker container create --cidfile ${DIND} --privileged endlessplanet/movingtea:$(git rev-parse --verify HEAD) &&
     docker network connect --alias docker $(cat ${NETW}) $(cat ${DIND}) &&
     docker container start $(cat ${DIND}) &&
+    cat ${DIND} &&
     docker container run --interactive --tty --rm --env DOCKER_HOST=tcp://docker:2376 --network $(cat ${NETW}) docker:17.10.0 sh
